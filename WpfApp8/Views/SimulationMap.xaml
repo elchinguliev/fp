@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfApp8.Views.SimulationMap"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp8.Views" xmlns:map="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF" xmlns:viewmodels="clr-namespace:WpfApp8.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:MainWindow}"
+        mc:Ignorable="d"
+        Title="SimulationMap" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <map:Map CredentialsProvider="{Binding ApiKey}"  Center="40.4089809,49.8106881" ZoomLevel="16">
+            
+        </map:Map>
+    </Grid>
+</Window>

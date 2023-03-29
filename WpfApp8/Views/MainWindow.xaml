@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfApp8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp8"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Image Source="https://t3.ftcdn.net/jpg/04/11/71/02/360_F_411710211_Np9uD5XpXlGIQ9gzIWYunuckaBaGK7YY.jpg" Margin="5,20,5,20" />
+            <Button Background="Orange" Height="30"  FontWeight="ExtraBlack" Content="Create Ride" Margin="10,50,10,10" Name="rideBtn" Command="{Binding RideCommand}"></Button>
+            <Button Background="Orange"  Height="30"  FontWeight="ExtraBlack" Content="Bus Driver" Margin="10,50,10,10" Name="busDriverBtn" Command="{Binding BusDriverCommand}" ></Button>
+            <Button Background="Orange" Height="30" FontWeight="ExtraBlack" Content="Student" Margin="10,50,10,10" Name="studentBtn" Command="{Binding StudentCommand}"></Button>
+            <Button Background="Orange" Height="30" FontWeight="ExtraBlack" Content="Bus" Margin="10,50,10,10" Name="busBtn" Command="{Binding BusCommand}"></Button>
+        </StackPanel>
+        <ContentControl Grid.Column="1" Content="{Binding CurrentViewModel}"></ContentControl>
+        <StackPanel Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Center">
+            <Image Source="http://images.pcmac.org///images/Clients/961/1224/Departments/Human%20Resources//Substitute_Banner.png"/>
+        </StackPanel>
+    </Grid>
+</Window>

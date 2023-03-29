@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="WpfApp8.Views.Bus"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp8.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" FontSize="30" FontWeight="ExtraBlack" Background="LightGray">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="12*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <ComboBox Name="busCOmboBox" Grid.ColumnSpan="2" Background="White" Height="55" VerticalAlignment="Top"></ComboBox>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <Label Content="Vendor - " HorizontalAlignment="Left" Margin="10"></Label>
+            <Label Content=" Relay Date - " HorizontalAlignment="Left"></Label>
+            <Label Content="Car Number : " HorizontalAlignment="Left" Margin="10"></Label>
+            <Label Content=" Seat Count - " HorizontalAlignment="Left"></Label>
+        </StackPanel>
+        <Canvas Grid.Row="1" Grid.Column="1">
+            <TextBox x:Name="brand" Width="200" HorizontalAlignment="Left" Canvas.Left="227" Canvas.Top="10" VerticalAlignment="Center"/>
+            <TextBox PreviewTextInput="relay_PreviewTextInput"  x:Name="relay" Width="200" HorizontalAlignment="Left" Canvas.Left="227" Canvas.Top="69"/>
+            <TextBox PreviewTextInput="relay_PreviewTextInput"  x:Name="seria" Width="200" HorizontalAlignment="Center" Canvas.Left="227" Canvas.Top="134" VerticalAlignment="Top" Height="40"/>
+            <TextBox PreviewTextInput="relay_PreviewTextInput"  x:Name="seat" Width="200" HorizontalAlignment="Center" Canvas.Left="227" Canvas.Top="200" VerticalAlignment="Top"/>
+        </Canvas>
+        <Button x:Name="tickBtn" Click="tickBtn_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent" RenderTransformOrigin="0.669,0.525" Canvas.Left="393" Canvas.Top="86" Height="96" Grid.Column="1" Margin="479,150,0,0" Grid.Row="1">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="https://thumbs.dreamstime.com/b/check-marks-green-tick-icon-simple-vector-illustration-140098669.jpg"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</UserControl>
